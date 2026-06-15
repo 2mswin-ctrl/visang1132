@@ -1,1 +1,1401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-(2) 상호 작용적 매체와 소통 - 학습 포털</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Noto Sans KR -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        /* 3D 플래시카드 뒤집기 애니메이션 스타일 */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        .transform-style-3d {
+            transform-style: preserve-3d;
+        }
+        .backface-hidden {
+            backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
 
+    <!-- 네비게이션 바 -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="bg-indigo-600 text-white p-2 rounded-lg font-bold text-sm">국어 1-1</span>
+                <h1 class="text-lg font-bold text-slate-900 tracking-tight">3-(2) 상호 작용적 매체와 소통</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                <a href="#core-concepts" class="hover:text-indigo-600 transition-colors">핵심 개념</a>
+                <a href="#media-comparison" class="hover:text-indigo-600 transition-colors">매체 비교</a>
+                <a href="#vocabulary-learning" class="hover:text-indigo-600 transition-colors text-indigo-600 font-bold">어휘 학습</a>
+                <a href="#mini-quiz" class="hover:text-indigo-600 transition-colors">평가</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        <!-- 단원 인트로 및 학습 목표 -->
+        <div class="bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-800 rounded-3xl p-6 sm:p-10 text-white shadow-xl mb-10 relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 opacity-10">
+                <!-- 데코레이션 아이콘 -->
+                <svg class="w-64 h-64 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/>
+                </svg>
+            </div>
+            <div class="relative z-10">
+                <span class="bg-white/20 text-white text-xs px-3 py-1.5 rounded-full font-semibold uppercase tracking-wider">소단원 완벽 학습</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold mt-4 mb-2 tracking-tight">상호 작용적 매체와 똑똑한 소통</h2>
+                <p class="text-indigo-100 text-sm sm:text-base max-w-2xl mb-6">
+                    오늘날 다양한 쌍방향 매체의 활용법을 마스터하고, 문해력을 다지는 어휘 학습과 종합 서술식 평가를 통과해 보세요!
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-indigo-500/30 pt-6 mt-6">
+                    <div class="flex items-start space-x-3">
+                        <div class="bg-indigo-500/30 p-2 rounded-lg mt-0.5">
+                            <svg class="w-5 h-5 text-indigo-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-indigo-50 text-sm">핵심 매체 특징</h4>
+                            <p class="text-xs text-indigo-200 mt-1">누리집, SNS, 온라인 대화방을 완벽 비교 분석합니다.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="bg-indigo-500/30 p-2 rounded-lg mt-0.5">
+                            <svg class="w-5 h-5 text-indigo-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-indigo-50 text-sm">교과서 문해력 어휘</h4>
+                            <p class="text-xs text-indigo-200 mt-1">주요 필수 어휘들을 재미있는 플래시카드로 익힙니다.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="bg-indigo-500/30 p-2 rounded-lg mt-0.5">
+                            <svg class="w-5 h-5 text-indigo-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-indigo-50 text-sm">실전 15문항 평가</h4>
+                            <p class="text-xs text-indigo-200 mt-1">OX 문제부터 고난도 소단원 평가 기출까지 점검합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 1: 핵심 정리 카드 영역 -->
+        <section id="core-concepts" class="mb-14 scroll-mt-20">
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">꼭 알아야 할 핵심 정리 카드</h3>
+                    <p class="text-sm text-slate-500 mt-1">각 카드를 클릭하여 깊이 있는 개념 설명과 교과서 예시를 확인해 보세요.</p>
+                </div>
+                <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">총 6장</span>
+            </div>
+
+            <!-- 카드 그리드 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div onclick="openCardModal(1)" class="group cursor-pointer bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between h-64">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-emerald-50 text-emerald-700 text-xs px-2.5 py-1 rounded-md font-semibold">정의 & 개념</span>
+                            <div class="text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">상호 작용적 매체란 무엇일까?</h4>
+                        <p class="text-slate-600 text-sm line-clamp-3">정보의 수용과 생산이 쌍방향으로 이루어지는 대표적인 현대 의사소통 수단입니다. 이 매체들의 기본 원리에 대해 알아봅니다.</p>
+                    </div>
+                    <div class="text-xs text-slate-400 border-t border-slate-100 pt-3 flex items-center justify-between">
+                        <span>자료 카드 #01</span>
+                        <span class="font-medium text-indigo-600 group-hover:underline">클릭하여 열기</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div onclick="openCardModal(2)" class="group cursor-pointer bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between h-64">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-blue-50 text-blue-700 text-xs px-2.5 py-1 rounded-md font-semibold">매체 특성</span>
+                            <div class="text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">상호 작용적 매체의 대표적 특성</h4>
+                        <p class="text-slate-600 text-sm line-clamp-3">시공간 제약 극복, 실시간 정보 전달, 생산자와 수용자 경계의 소멸 등 다른 일방향성 매체와 구별되는 3대 매체적 특성을 탐구합니다.</p>
+                    </div>
+                    <div class="text-xs text-slate-400 border-t border-slate-100 pt-3 flex items-center justify-between">
+                        <span>자료 카드 #02</span>
+                        <span class="font-medium text-indigo-600 group-hover:underline">클릭하여 열기</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div onclick="openCardModal(3)" class="group cursor-pointer bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between h-64">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-amber-50 text-amber-700 text-xs px-2.5 py-1 rounded-md font-semibold">주의사항</span>
+                            <div class="text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">상호 작용적 매체 활용 시 유의할 점</h4>
+                        <p class="text-slate-600 text-sm line-clamp-3">매체 유형별 목적 파악, 상대와의 친밀도 고려, 사적 소통과 공적 소통의 조화로운 방식 채택 등 신중한 사용 수칙에 대해 배웁니다.</p>
+                    </div>
+                    <div class="text-xs text-slate-400 border-t border-slate-100 pt-3 flex items-center justify-between">
+                        <span>자료 카드 #03</span>
+                        <span class="font-medium text-indigo-600 group-hover:underline">클릭하여 열기</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div onclick="openCardModal(4)" class="group cursor-pointer bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between h-64">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-purple-50 text-purple-700 text-xs px-2.5 py-1 rounded-md font-semibold">소통 맥락</span>
+                            <div class="text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">소통 상황과 맥락 고려의 필요성</h4>
+                        <p class="text-slate-600 text-sm line-clamp-3">같은 매체라도 누구와, 어떤 목적으로 이야기하느냐에 따라 표현 양식이 달라집니다. 발표할 때와 편할 때 입는 옷차림의 비유로 파악합니다.</p>
+                    </div>
+                    <div class="text-xs text-slate-400 border-t border-slate-100 pt-3 flex items-center justify-between">
+                        <span>자료 카드 #04</span>
+                        <span class="font-medium text-indigo-600 group-hover:underline">클릭하여 열기</span>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div onclick="openCardModal(5)" class="group cursor-pointer bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between h-64">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-rose-50 text-rose-700 text-xs px-2.5 py-1 rounded-md font-semibold">실제 분석</span>
+                            <div class="text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">교과서 실전 사례: 강아지 찾기 소동</h4>
+                        <p class="text-slate-600 text-sm line-clamp-3">주인공 정민이가 잃어버린 반려견 해피를 찾기 위해 온라인 대화방과 SNS를 어떻게 유기적이고 상호보완적으로 사용했는지 확인해 봅니다.</p>
+                    </div>
+                    <div class="text-xs text-slate-400 border-t border-slate-100 pt-3 flex items-center justify-between">
+                        <span>자료 카드 #05</span>
+                        <span class="font-medium text-indigo-600 group-hover:underline">클릭하여 열기</span>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div onclick="openCardModal(6)" class="group cursor-pointer bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between h-64">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-cyan-50 text-cyan-700 text-xs px-2.5 py-1 rounded-md font-semibold">처방 & 대책</span>
+                            <div class="text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">나의 소통 습관 진단 및 매체 처방전</h4>
+                        <p class="text-slate-600 text-sm line-clamp-3">우리가 자주 범하는 실수(사적인 방에서 공적인 내용 보내기, 맞춤법 실수 등)에 대한 명확한 자가진단 및 교정 가이드를 제시합니다.</p>
+                    </div>
+                    <div class="text-xs text-slate-400 border-t border-slate-100 pt-3 flex items-center justify-between">
+                        <span>자료 카드 #06</span>
+                        <span class="font-medium text-indigo-600 group-hover:underline">클릭하여 열기</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: 매체별 특성 인터랙티브 비교 영역 -->
+        <section id="media-comparison" class="mb-14 scroll-mt-20">
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+                <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">매체 유형별 특성 한눈에 비교하기</h3>
+                        <p class="text-sm text-slate-500 mt-1">상호 작용적 매체의 3대 대표 범주의 기능적 차이와 주로 일어나는 소통 맥락을 비교해 보세요.</p>
+                    </div>
+                    <!-- '어휘 학습'으로 스크롤 이동하는 숏컷 버튼 추가 -->
+                    <a href="#vocabulary-learning" class="inline-flex items-center space-x-1 text-xs font-bold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 px-4 py-2.5 rounded-xl transition-all self-start sm:self-center">
+                        <span>💡 어휘 학습(플래시카드) 바로가기</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-6l-7 7-7-7"></path></svg>
+                    </a>
+                </div>
+
+                <!-- 탭 메뉴 버튼 -->
+                <div class="flex border-b border-slate-200 mb-6 overflow-x-auto space-x-2">
+                    <button onclick="switchTab('homepage')" id="btn-homepage" class="py-3 px-5 text-sm font-semibold border-b-2 border-indigo-600 text-indigo-600 transition-all whitespace-nowrap focus:outline-none flex items-center space-x-2">
+                        <span>💻 누리집 (Homepage)</span>
+                    </button>
+                    <button onclick="switchTab('sns')" id="btn-sns" class="py-3 px-5 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300 transition-all whitespace-nowrap focus:outline-none flex items-center space-x-2">
+                        <span>📱 사회 관계망 서비스 (SNS)</span>
+                    </button>
+                    <button onclick="switchTab('chatroom')" id="btn-chatroom" class="py-3 px-5 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300 transition-all whitespace-nowrap focus:outline-none flex items-center space-x-2">
+                        <span>💬 온라인 대화방 (Chat)</span>
+                    </button>
+                </div>
+
+                <!-- 탭 상세 내용 영역 -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- 매체 특징 설명 (Left) -->
+                    <div class="lg:col-span-5 space-y-4" id="media-desc">
+                        <!-- 콘텐츠 교체 지점 (JS에서 삽입됨) -->
+                    </div>
+
+                    <!-- 가상 시각화 모형 (Right) -->
+                    <div class="lg:col-span-7 bg-slate-100 rounded-2xl p-4 sm:p-6 border border-slate-200">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <div class="w-3 h-3 rounded-full bg-rose-400"></div>
+                            <div class="w-3 h-3 rounded-full bg-amber-400"></div>
+                            <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
+                            <span class="text-xs text-slate-400 ml-2 font-medium" id="preview-title">누리집(홈페이지) 미리보기</span>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-inner min-h-[300px] border border-slate-200 p-4" id="media-preview-content">
+                            <!-- 콘텐츠 교체 지점 (JS에서 삽입됨) -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: 어휘 학습 플래시카드 영역 (NEW) -->
+        <section id="vocabulary-learning" class="mb-14 scroll-mt-20">
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+                <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">📖 교과서 '문해력 다지기' 어휘 학습</h3>
+                        <p class="text-sm text-slate-500 mt-1">상호 작용적 매체 단원의 필수 어휘를 스마트한 플래시카드로 익혀 보세요. 카드를 클릭하면 단어의 정의와 예문이 나타납니다.</p>
+                    </div>
+                    <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-3 py-1.5 rounded-full self-start sm:self-center">총 6단어</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center justify-center">
+                    <!-- 왼쪽 제어 및 안내 (Left) -->
+                    <div class="md:col-span-4 space-y-4">
+                        <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100">
+                            <h4 class="font-bold text-indigo-900 text-sm">💡 카드 학습 가이드</h4>
+                            <ul class="list-disc pl-5 mt-2 text-xs text-indigo-950 space-y-1.5">
+                                <li>카드를 클릭하면 <strong>단어명 ↔ 단어의 뜻과 예문</strong>이 3D 회전하며 뒤집힙니다.</li>
+                                <li>아래 컨트롤러 단추를 활용하여 이전/다음 단어로 탐색할 수 있습니다.</li>
+                                <li>스스로 소리 내어 읽으며 암기하면 문해력 학습 효율이 200% 상승합니다!</li>
+                            </ul>
+                        </div>
+                        <div class="flex items-center justify-between p-2.5 bg-slate-50 rounded-xl border border-slate-100 text-xs">
+                            <span class="text-slate-500">현재 학습 진행도:</span>
+                            <span class="font-bold text-indigo-600" id="card-progress">1 / 6 단어</span>
+                        </div>
+                    </div>
+
+                    <!-- 플래시 카드 뷰어 (Right) -->
+                    <div class="md:col-span-8 flex flex-col items-center justify-center space-y-6">
+                        <!-- Card Container -->
+                        <div class="w-full max-w-md h-72 perspective-1000 cursor-pointer" onclick="flipVocabCard()">
+                            <div id="vocab-card-inner" class="w-full h-full transform-style-3d transition-transform duration-500 relative">
+                                <!-- Card Front (단어명) -->
+                                <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-indigo-700 text-white rounded-2xl flex flex-col justify-between p-6 shadow-lg backface-hidden border-2 border-indigo-400">
+                                    <div class="flex justify-between items-center w-full">
+                                        <span class="bg-white/20 text-white text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider">Vocab Card</span>
+                                        <span class="text-xs text-indigo-200 font-medium" id="card-front-id">01 / 06</span>
+                                    </div>
+                                    <div class="text-center flex-grow flex flex-col items-center justify-center">
+                                        <h4 id="vocab-word" class="text-3xl sm:text-4xl font-extrabold tracking-wide drop-shadow-md">매체</h4>
+                                        <span class="text-xs text-indigo-100/70 mt-3 animate-pulse">탭하여 카드 뒤집기 🔄</span>
+                                    </div>
+                                    <div class="text-center text-[10px] text-indigo-200">
+                                        비상교육 중등 국어 1-1
+                                    </div>
+                                </div>
+                                <!-- Card Back (정의 및 예문) -->
+                                <div class="absolute inset-0 bg-white text-slate-800 rounded-2xl flex flex-col justify-between p-6 shadow-lg backface-hidden rotate-y-180 border-2 border-indigo-100 overflow-y-auto custom-scrollbar">
+                                    <div class="flex justify-between items-center border-b border-slate-100 pb-2">
+                                        <h5 id="vocab-back-word" class="font-black text-lg text-indigo-600">매체 (단어)</h5>
+                                        <span class="bg-indigo-50 text-indigo-600 text-[10px] px-2 py-0.5 rounded-md font-bold">뜻 & 예문</span>
+                                    </div>
+                                    <div class="flex-grow py-3 space-y-2 text-xs">
+                                        <div class="bg-slate-50 p-2.5 rounded-lg border-l-4 border-indigo-500">
+                                            <p class="font-bold text-slate-800 text-[11px] mb-0.5">💡 어휘 정의</p>
+                                            <p id="vocab-definition" class="text-slate-600 leading-relaxed text-[11px] font-medium">어떤 작용을 한쪽에서 다른 쪽으로 전달하는 물체. 또는 그런 수단.</p>
+                                        </div>
+                                        <div class="space-y-1.5 pt-1">
+                                            <p class="text-[10px] text-slate-500"><strong class="text-indigo-600">교과서 예문:</strong> <span id="vocab-ex-book" class="italic">"자신의 소통 방식의 적절성을 검토하며 올바른 매체 소통 능력을 길러 보세요."</span></p>
+                                            <p class="text-[10px] text-slate-500"><strong class="text-emerald-600">내가 만든 예문:</strong> <span id="vocab-ex-my">"대중 매체를 통해 요즘 유행하는 노래를 알게 되었다."</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="text-center text-[10px] text-slate-400 border-t border-slate-100 pt-1.5">
+                                        클릭하여 단어로 돌아가기 🔄
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Navigation Controls -->
+                        <div class="flex items-center space-x-4">
+                            <button onclick="prevVocabCard()" class="bg-slate-100 hover:bg-slate-200 text-slate-600 w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-sm">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            </button>
+                            <button onclick="shuffleVocabCards()" class="bg-slate-100 hover:bg-slate-200 text-slate-600 px-4 py-2 rounded-xl text-xs font-semibold flex items-center space-x-1 transition-all shadow-sm">
+                                <span>🔀 셔플</span>
+                            </button>
+                            <button onclick="nextVocabCard()" class="bg-slate-100 hover:bg-slate-200 text-slate-600 w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-sm">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: 종합 평가 영역 (퀴즈 15문항) -->
+        <section id="mini-quiz" class="mb-14 scroll-mt-20">
+            <div class="bg-indigo-50/50 rounded-2xl border border-indigo-100 p-6 sm:p-8">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6">
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight flex items-center space-x-2">
+                            <span>📝 소단원 형성 평가</span>
+                        </h3>
+                        <p class="text-sm text-slate-500 mt-1">기존 쪽지 시험 OX 문제부터 새로 보강된 고난도 평가 기출까지 총 15문항을 완벽 정복해 보세요!</p>
+                    </div>
+                    <div class="mt-3 sm:mt-0 flex items-center space-x-3 bg-white px-4 py-1.5 rounded-full border border-slate-200 shadow-sm text-sm">
+                        <span class="text-slate-500 font-medium">현재 진도:</span>
+                        <span class="font-bold text-indigo-600" id="quiz-progress">1 / 15</span>
+                    </div>
+                </div>
+
+                <!-- 퀴즈 인터페이스 컨테이너 -->
+                <div id="quiz-card-container" class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+                    <!-- 문제 본문 -->
+                    <div class="mb-6">
+                        <span id="quiz-type" class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded">OX 퀴즈</span>
+                        <h4 id="quiz-question" class="text-lg font-bold text-slate-900 mt-3 mb-2 leading-relaxed">
+                            상호 작용적 매체를 활용하여 소통할 때 상황 맥락은 고려할 필요가 없다.
+                        </h4>
+                        <p id="quiz-subtext" class="text-xs text-slate-400">알맞은 답을 아래 버튼 중에서 선택하세요.</p>
+                    </div>
+
+                    <!-- 답변 제어 영역 -->
+                    <div id="quiz-options" class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+                        <!-- 버튼이 JS에서 동적으로 생성됩니다 -->
+                    </div>
+
+                    <!-- 피드백 메시지 영역 -->
+                    <div id="quiz-feedback" class="hidden rounded-xl p-4 mb-4 flex items-start space-x-3">
+                        <!-- 성공/실패 여부와 상세 해설 삽입 -->
+                    </div>
+
+                    <!-- 하단 액션 버튼 -->
+                    <div class="flex justify-between items-center border-t border-slate-100 pt-4 mt-6">
+                        <button onclick="resetQuiz()" class="text-xs font-semibold text-slate-500 hover:text-slate-700 transition-colors flex items-center space-x-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 15H19"></path></svg>
+                            <span>평가 초기화</span>
+                        </button>
+                        <button id="btn-next" onclick="nextQuizQuestion()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-md transition-all flex items-center space-x-2">
+                            <span>다음 문제</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 퀴즈 최종 완료 성적표 화면 (평소 숨김) -->
+                <div id="quiz-result-container" class="hidden bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-md space-y-6">
+                    <div class="text-center py-6">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-indigo-50 text-indigo-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="text-2xl font-extrabold text-slate-950">단원 평가가 완료되었습니다!</h4>
+                        <p class="text-slate-500 text-sm mt-1">과연 나의 의사소통 평가 점수는 몇 점일까요?</p>
+                        
+                        <div class="mt-6 inline-block bg-indigo-600 text-white px-8 py-3 rounded-2xl font-black text-3xl shadow-lg shadow-indigo-600/20">
+                            <span id="result-score">0</span> / 15 문제 정답
+                        </div>
+                        <p id="result-feedback-message" class="text-sm font-bold text-indigo-800 mt-4">최선을 다한 도전이 자랑스럽습니다!</p>
+                    </div>
+
+                    <!-- 오답 노트 및 해설 정리 리스트 -->
+                    <div class="border-t border-slate-200 pt-6">
+                        <h5 class="font-bold text-slate-950 text-base mb-4 flex items-center space-x-1.5">
+                            <span>📋 전체 문제 오답 노트 & 해설 리뷰</span>
+                        </h5>
+                        <div id="quiz-review-list" class="space-y-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
+                            <!-- 동적 오답 분석이 삽입됨 -->
+                        </div>
+                    </div>
+
+                    <!-- 다시 응시하기 단추 -->
+                    <div class="flex justify-center border-t border-slate-100 pt-6">
+                        <button onclick="resetQuiz()" class="bg-slate-900 hover:bg-slate-800 text-white font-bold px-6 py-3 rounded-xl text-sm transition-all shadow-md">
+                            🔄 단원 평가 다시 도전하기
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 py-6 text-center">
+        <p class="text-xs text-slate-400">© 2026 비상교육 중등 국어 1-1 단원 정리 도구. 본 사이트는 교육용 모의 환경 자료입니다.</p>
+    </footer>
+
+    <!-- ================= MODAL & POPUP AREA ================= -->
+    <!-- 카드 클릭 상세 팝업 모달 -->
+    <div id="card-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-3xl w-full max-w-2xl max-h-[85vh] flex flex-col shadow-2xl border border-slate-100 transform scale-95 transition-transform duration-300 overflow-hidden">
+            <!-- 모달 헤더 -->
+            <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50">
+                <span id="modal-category" class="bg-indigo-50 text-indigo-700 text-xs px-2.5 py-1 rounded-md font-semibold">정의 & 개념</span>
+                <button onclick="closeCardModal()" class="text-slate-400 hover:text-slate-600 transition-colors focus:outline-none p-1 bg-white hover:bg-slate-100 rounded-full border border-slate-200">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <!-- 모달 바디 (스크롤 가능) -->
+            <div id="modal-body" class="p-6 overflow-y-auto custom-scrollbar flex-grow space-y-4 text-slate-700 text-sm leading-relaxed">
+                <!-- 동적으로 채워질 예정 -->
+            </div>
+            <!-- 모달 푸터 -->
+            <div class="px-6 py-4 border-t border-slate-100 flex justify-end items-center bg-slate-50 space-x-3">
+                <span class="text-xs text-slate-400" id="modal-card-id">자료 카드 #01</span>
+                <button onclick="closeCardModal()" class="bg-slate-900 hover:bg-slate-800 text-white px-5 py-2.5 rounded-xl font-bold text-xs transition-colors">닫기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 알림 및 확인 메시지 팝업 모달 (alert 우회용) -->
+    <div id="alert-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm hidden">
+        <div class="bg-white rounded-2xl w-full max-w-sm p-6 shadow-2xl border border-slate-100 text-center">
+            <div class="mx-auto w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4" id="alert-icon-container">
+                <!-- SVG Icon (동적 변경 예정) -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <h4 id="alert-title" class="text-base font-bold text-slate-900 mb-2">알림</h4>
+            <p id="alert-message" class="text-sm text-slate-500 mb-6 leading-relaxed">성공적으로 작업이 완료되었습니다.</p>
+            <button onclick="closeAlertModal()" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 rounded-xl text-sm shadow-md transition-all">확인</button>
+        </div>
+    </div>
+
+    <!-- ================= JAVASCRIPT & LOGIC ================= -->
+    <script>
+        // --- 1. 자료 카드 데이터 세트 (박현숙 교과서 수록 내용 반영) ---
+        const CARD_DATA = {
+            1: {
+                category: "개념 & 기본 정의",
+                tagColor: "bg-emerald-50 text-emerald-700",
+                title: "상호 작용적 매체란 무엇일까?",
+                cardId: "자료 카드 #01",
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-xl">
+                            <h5 class="font-bold text-emerald-900 mb-1">📖 핵심 정의</h5>
+                            <p class="text-emerald-950 font-medium text-base">정보의 수용과 생산이 <strong>쌍방향(상호 작용적)</strong>으로 이루어지는 소통 도구입니다.</p>
+                        </div>
+                        
+                        <div class="space-y-2 mt-4">
+                            <h5 class="font-bold text-slate-900 text-sm">💡 일방향 매체 vs 쌍방향 매체</h5>
+                            <ul class="list-disc pl-5 space-y-1.5 text-slate-600">
+                                <li><strong>일방향 매체 (라디오, 신문, 지상파 TV):</strong> 정보의 생산자가 수용자에게 일방적으로 내용을 제공하며, 수용자는 주어진 정보를 그대로 수집하기만 합니다.</li>
+                                <li><strong>쌍방향 매체 (상호 작용적 매체):</strong> 누구나 실시간으로 정보를 수용하고 즉각적으로 피드백을 전달할 뿐만 아니라, 직접 새로운 정보 콘텐츠를 생산해 낼 수 있습니다.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-slate-50 p-4 rounded-xl mt-4">
+                            <h5 class="font-bold text-slate-900 text-xs mb-1">✔ 교과서 요약 노트</h5>
+                            <p class="text-xs text-slate-500 leading-relaxed">현대 사회의 정보 통신 기술 발달과 함께 우리의 일상 소통 방식을 완전히 바꿔 놓은 결정적인 매체적 변화입니다.</p>
+                        </div>
+                    </div>
+                `
+            },
+            2: {
+                category: "매체적 특징",
+                tagColor: "bg-blue-50 text-blue-700",
+                title: "상호 작용적 매체의 3대 대표 특성",
+                cardId: "자료 카드 #02",
+                content: `
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-1 gap-3">
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                                <h5 class="font-bold text-slate-900 text-sm flex items-center space-x-1.5">
+                                    <span class="text-blue-500">🕐</span>
+                                    <span>시공간의 제약 극복</span>
+                                </h5>
+                                <p class="text-xs text-slate-600 mt-1">지리적으로 멀리 떨어져 있거나 낮과 밤이 다른 시간대라도, 네트워크만 연결되어 있다면 언제 어디서나 실시간 대화가 가능합니다.</p>
+                            </div>
+
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                                <h5 class="font-bold text-slate-900 text-sm flex items-center space-x-1.5">
+                                    <span class="text-blue-500">⚡</span>
+                                    <span>실시간 정보의 전달 (신속성)</span>
+                                </h5>
+                                <p class="text-xs text-slate-600 mt-1">사건이 일어난 거의 동시적인 시점에 정보를 즉각 전달할 수 있어, 위기상황(실종견 찾기, 긴급 재난 알림 등) 전파 등에 압도적인 강점을 보입니다.</p>
+                            </div>
+
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                                <h5 class="font-bold text-slate-900 text-sm flex items-center space-x-1.5">
+                                    <span class="text-blue-500">🔄</span>
+                                    <span>생산자와 수용자의 역할 공존</span>
+                                </h5>
+                                <p class="text-xs text-slate-600 mt-1">글을 단순히 읽는 독자(수용자)가 댓글, 공유, 추천을 통해 순식간에 발신인(생산자)이 되며 경계가 사라집니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            3: {
+                category: "소통 시 주의사항",
+                tagColor: "bg-amber-50 text-amber-700",
+                title: "상호 작용적 매체를 활용할 때 유의해야 할 점",
+                cardId: "자료 카드 #03",
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-100">
+                            <h5 class="font-bold text-amber-900 text-sm mb-2">⚠ 매체 사용 전에 꼭 짚어봐야 할 세 가지 수칙</h5>
+                            <ol class="list-decimal pl-5 space-y-2 text-xs text-slate-700">
+                                <li>
+                                    <strong>매체의 목적과 적합한 소통 방식 파악하기:</strong>
+                                    <p class="text-slate-500 mt-0.5">매체 종류(누리집, SNS, 대화방 등)에 따라 적합한 어조와 소통 방식이 다릅니다.</p>
+                                </li>
+                                <li>
+                                    <strong>상대와의 친밀도 및 맥락 분석:</strong>
+                                    <p class="text-slate-500 mt-0.5">친한 친구와의 1대1 대화와 모둠 수행평가를 위한 공적 토의 대화방은 달라야 합니다.</p>
+                                </li>
+                                <li>
+                                    <strong>개인적(사적) vs 사회적(공적) 경계 구분:</strong>
+                                    <p class="text-slate-500 mt-0.5">공적인 단체 대화방에 개인 사담이나 지나치게 사적인 의견을 도배하지 않도록 주의합니다.</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                `
+            },
+            4: {
+                category: "의사소통 맥락",
+                tagColor: "bg-purple-50 text-purple-700",
+                title: "상황 맥락과 옷차림의 비유",
+                cardId: "자료 카드 #04",
+                content: `
+                    <div class="space-y-4">
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            <strong>"여러 사람 앞에서 격식 있는 발표를 할 때 입는 옷과 집에서 편하게 쉴 때 입는 옷은 분명히 다릅니다."</strong>
+                        </p>
+                        
+                        <div class="bg-indigo-50/60 p-4 rounded-2xl border border-indigo-100 flex items-center space-x-4">
+                            <div class="text-4xl">👔</div>
+                            <div>
+                                <h5 class="font-bold text-indigo-950 text-xs">격식과 예의 (공적 상황)</h5>
+                                <p class="text-[11px] text-indigo-800 leading-relaxed mt-0.5">누리집이나 공식 게시판, 학급 대화방 등에서는 명확하고 정중한 높임말과 표준어를 준수해야 합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-amber-50/60 p-4 rounded-2xl border border-amber-100 flex items-center space-x-4">
+                            <div class="text-4xl">👕</div>
+                            <div>
+                                <h5 class="font-bold text-amber-950 text-xs">친밀함과 편안함 (사적 상황)</h5>
+                                <p class="text-[11px] text-amber-800 leading-relaxed mt-0.5">친밀한 관계인 사적인 온라인 단 대화방에서는 상대적으로 이모티콘이나 신조어, 그림판 사진 등을 통한 자유로운 소통이 허용됩니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            5: {
+                category: "교과서 사례",
+                tagColor: "bg-rose-50 text-rose-700",
+                title: "실전 사례 탐구: '해피를 찾습니다!'",
+                cardId: "자료 카드 #05",
+                content: `
+                    <div class="space-y-4">
+                        <p class="text-slate-600 text-xs leading-relaxed">교과서 속 정민이의 실종견 '해피' 구출 스토리는 다양한 상호 작용적 매체가 유기적으로 결합하여 문제를 완벽하게 해결해 나가는 방식을 완벽하게 보여줍니다.</p>
+                        
+                        <div class="space-y-3">
+                            <div class="p-3 bg-slate-50 rounded-xl">
+                                <h5 class="font-bold text-slate-900 text-xs flex items-center space-x-1.5">
+                                    <span class="text-rose-500">💬</span>
+                                    <span>1단계: 온라인 대화방을 통한 상황 전파</span>
+                                </h5>
+                                <p class="text-[11px] text-slate-500 mt-0.5">친구에게 "우리 해피가 사라졌어"라며 실시간으로 긴급한 도움을 요청하고 위치를 서로 보냈습니다.</p>
+                            </div>
+
+                            <div class="p-3 bg-slate-50 rounded-xl">
+                                <h5 class="font-bold text-slate-900 text-xs flex items-center space-x-1.5">
+                                    <span class="text-rose-500">📱</span>
+                                    <span>2단계: SNS(사회 관계망 서비스)에 전단지 배포</span>
+                                </h5>
+                                <p class="text-[11px] text-slate-500 mt-0.5">불특정 다수가 신속하게 글을 널리 퍼뜨릴 수 있는 SNS의 전파력을 이용하여 해피의 사진과 인상착의를 담은 실종 글을 개방된 공간에 업로드하였습니다.</p>
+                            </div>
+
+                            <div class="p-3 bg-slate-50 rounded-xl">
+                                <h5 class="font-bold text-slate-900 text-xs flex items-center space-x-1.5">
+                                    <span class="text-rose-500">💻</span>
+                                    <span>3단계: 공적 누리집 활용</span>
+                                </h5>
+                                <p class="text-[11px] text-slate-500 mt-0.5">유기견 보호 센터나 구청 등의 공식 누리집 게시판에 공적인 서류 및 글 작성을 완료하여 정식 시스템에 도움을 요청했습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            6: {
+                category: "의사소통 처방전",
+                tagColor: "bg-cyan-50 text-cyan-700",
+                title: "소통 습관 교정을 위한 '처방전' 제안",
+                cardId: "자료 카드 #06",
+                content: `
+                    <div class="space-y-4">
+                        <p class="text-slate-600 text-xs leading-relaxed">우리 모둠에서 자주 발생하는 소통 실수들에 대한 해결책(처방전) 목록입니다.</p>
+                        
+                        <div class="divide-y divide-slate-100">
+                            <div class="py-2.5">
+                                <span class="bg-rose-100 text-rose-800 text-[10px] px-2 py-0.5 rounded-full font-bold">증상 1</span>
+                                <h5 class="font-bold text-slate-900 text-xs mt-1">공적인 단체 대화방에 사적인 수다 도배</h5>
+                                <p class="text-[11px] text-slate-500 mt-0.5">👉 <strong>처방전:</strong> 방 이름 앞에 [공적], [사적] 별도 라벨을 표기하여 시각적으로 쉽게 소통 공간을 인지하도록 합니다.</p>
+                            </div>
+
+                            <div class="py-2.5">
+                                <span class="bg-rose-100 text-rose-800 text-[10px] px-2 py-0.5 rounded-full font-bold">증상 2</span>
+                                <h5 class="font-bold text-slate-900 text-xs mt-1">상대의 상태를 전혀 고려하지 않은 심야 메시지 전송</h5>
+                                <p class="text-[11px] text-slate-500 mt-0.5">👉 <strong>처방전:</strong> 시급하지 않은 연락은 메모해두었다가 다음 날 아침 정식 시간에 발송하는 습관을 들입니다.</p>
+                            </div>
+
+                            <div class="py-2.5">
+                                <span class="bg-rose-100 text-rose-800 text-[10px] px-2 py-0.5 rounded-full font-bold">증상 3</span>
+                                <h5 class="font-bold text-slate-900 text-xs mt-1">반말, 거친 어조로 인한 오해 발생</h5>
+                                <p class="text-[11px] text-slate-500 mt-0.5">👉 <strong>처방전:</strong> 텍스트 소통 시에는 어조가 딱딱해지기 쉬우므로, '~해요', '~입니다'체 등 정중한 어조를 항상 유지합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        // --- 2. 매체별 상세 설명 및 가상 미리보기용 탭 데이터 세트 ---
+        const MEDIA_TABS = {
+            homepage: {
+                title: "💻 누리집 (Homepage)",
+                previewTitle: "구청 / 공공기관 공식 누리집 화면 예시",
+                desc: `
+                    <h4 class="text-lg font-bold text-slate-900">💻 누리집 (Homepage)</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        주로 공공기관이나 특정 단체의 <strong>업무 내용, 소개, 홍보 목적</strong>으로 구성된 비교적 공식적인 가상 소통 영역입니다.
+                    </p>
+                    <div class="space-y-2 mt-4 text-xs text-slate-600">
+                        <p class="font-semibold text-slate-900">주요 사용 용도:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>기관이나 단체의 공식 업무 수행 상황 확인</li>
+                            <li>정부 부처나 학교 안내 사항 등 공적인 정보 수집</li>
+                            <li>'질문하기', '건의 게시판' 등을 통한 공식 의견 게시</li>
+                        </ul>
+                        <p class="font-semibold text-slate-900 mt-3 text-indigo-600">⚠ 의사소통 가이드:</p>
+                        <p class="bg-indigo-50 text-indigo-950 p-2.5 rounded-lg">전달하려는 정보가 공식적이고 객관적인 사실이어야 하므로 정중하고 정확한 용어를 갖춰서 작성해야 합니다.</p>
+                    </div>
+                `,
+                preview: `
+                    <div class="border border-slate-200 rounded-lg overflow-hidden text-xs">
+                        <!-- 가상 사이트 헤더 -->
+                        <div class="bg-slate-900 text-white p-3 flex justify-between items-center">
+                            <span class="font-bold tracking-tight">🏛 푸른도시청 (Blue City Hall)</span>
+                            <div class="flex space-x-2 text-[10px] opacity-80">
+                                <span>로그인</span>
+                                <span>|</span>
+                                <span>사이트맵</span>
+                            </div>
+                        </div>
+                        <!-- 상단 네비 -->
+                        <div class="bg-slate-100 p-2 flex space-x-3 border-b border-slate-200 font-semibold text-slate-600">
+                            <span>소개</span>
+                            <span class="text-indigo-600 border-b border-indigo-600">열린광장</span>
+                            <span>신고센터</span>
+                        </div>
+                        <!-- 게시판 본문 -->
+                        <div class="p-4 space-y-3">
+                            <h5 class="font-bold text-sm text-slate-800 border-b border-slate-200 pb-2">📋 시민 참여 자유 건의판</h5>
+                            <div class="bg-amber-50 p-3 rounded border border-amber-200">
+                                <p class="font-bold text-slate-800">[건의] 푸른근린공원 내 가로등 점검 요청의 건</p>
+                                <p class="text-slate-600 mt-1">작성자: 시민대표_정민 | 작성일시: 2026.06.15</p>
+                                <p class="text-slate-700 mt-2 leading-relaxed">
+                                    안녕하십니까 구청장님. 평소 도시 청결과 시설 관리를 위해 애써주셔서 대단히 감사드립니다.<br>
+                                    다름이 아니라 푸른공원 제3쉼터 근처 가로등이 어제저녁부터 켜지지 않고 있습니다. 시민들의 야간 안심 도보를 위해 신속한 복구를 건의합니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            sns: {
+                title: "📱 사회 관계망 서비스 (SNS)",
+                previewTitle: "개인 SNS 피드 타임라인 화면 예시",
+                desc: `
+                    <h4 class="text-lg font-bold text-slate-900">📱 사회 관계망 서비스 (SNS)</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        특정한 관심사, 경험, 감정 또는 자신의 일상적인 활동 내용을 공유하며 서로 긴밀한 관계망을 온라인상에 직접 설계하는 플랫폼입니다.
+                    </p>
+                    <div class="space-y-2 mt-4 text-xs text-slate-600">
+                        <p class="font-semibold text-slate-900">주요 사용 용도:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>친한 친구뿐 아니라 불특정 대중과 관심사 교환</li>
+                            <li>긴급 정보(구조요청, 반려견 찾기, 정보 교류) 신속 공유</li>
+                            <li>사진, 영상 등의 풍부한 비언어적/반언어적 매체 활용</li>
+                        </ul>
+                        <p class="font-semibold text-slate-900 mt-3 text-emerald-600">⚠ 의사소통 가이드:</p>
+                        <p class="bg-emerald-50 text-emerald-950 p-2.5 rounded-lg">비교적 자유롭고 개방되어 있으나, 타인의 저작권을 침해하거나 사생활을 해치지 않도록 신중함을 잃지 않아야 합니다.</p>
+                    </div>
+                `,
+                preview: `
+                    <div class="border border-slate-200 rounded-lg overflow-hidden text-xs">
+                        <!-- 프로필 영역 -->
+                        <div class="p-3 border-b border-slate-100 flex items-center space-x-2">
+                            <div class="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-xs">🐕</div>
+                            <div>
+                                <p class="font-bold text-slate-800">Happy_Finder</p>
+                                <p class="text-[10px] text-slate-400">10분 전 • 푸른동</p>
+                            </div>
+                        </div>
+                        <!-- 포스트 본문 -->
+                        <div class="p-3">
+                            <p class="text-slate-800 leading-relaxed">
+                                <strong>📢 잃어버린 우리 집 강아지 해피를 애타게 찾고 있습니다! (공유 부탁드려요)</strong><br><br>
+                                • 품종: 푸들 (갈색, 매우 순함)<br>
+                                • 잃어버린 위치: 푸른동 종합상가 근처 공원 입구<br>
+                                • 특징: 파란색 목줄을 착용하고 있으며, 이름을 부르면 꼬리를 힘차게 흔듭니다.<br><br>
+                                발견하신 분은 프로필 다이렉트 메시지(DM)를 주시거나 댓글을 부탁드립니다. 도와주세요!
+                            </p>
+                            <!-- 해피 모의 이미지 박스 -->
+                            <div class="mt-3 bg-slate-100 rounded-lg p-6 border border-dashed border-slate-300 text-center text-slate-400">
+                                🐕 [갈색 푸들 해피의 실종 당시 사진 첨부]
+                            </div>
+                        </div>
+                        <!-- 리액션 바 -->
+                        <div class="bg-slate-50 p-2 border-t border-slate-100 flex justify-around text-slate-500 text-[10px] font-semibold">
+                            <span>❤️ 좋아요 124개</span>
+                            <span>💬 댓글 18개</span>
+                            <span>🔄 공유 45회</span>
+                        </div>
+                    </div>
+                `
+            },
+            chatroom: {
+                title: "💬 온라인 대화방 (Chatroom)",
+                previewTitle: "스마트폰 메신저 대화방 화면 예시",
+                desc: `
+                    <h4 class="text-lg font-bold text-slate-900">💬 온라인 대화방 (Chatroom)</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        온라인 가상 모바일 영역에서 두 명 이상의 유저가 <strong>실시간으로 텍스트, 음성, 이모티콘</strong>을 전송하며 대화를 나눌 수 있는 매체입니다.
+                    </p>
+                    <div class="space-y-2 mt-4 text-xs text-slate-600">
+                        <p class="font-semibold text-slate-900">주요 사용 용도:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>가족, 친구와의 일상적이고 친근한 사담 나누기</li>
+                            <li>학급 회의, 모둠별 단체 협력 과제 피드백 교환</li>
+                            <li>사진이나 약속된 위치 정보, 문서 공유 기능</li>
+                        </ul>
+                        <p class="font-semibold text-slate-900 mt-3 text-rose-600">⚠ 의사소통 가이드:</p>
+                        <p class="bg-rose-50 text-rose-950 p-2.5 rounded-lg">전송 속도가 빠르기 때문에 감정적으로 상대를 자극하는 발언을 쉽게 내던지기 쉽습니다. 전송 버튼을 누르기 전 한 번 더 읽어 보는 습관이 중요합니다.</p>
+                    </div>
+                `,
+                preview: `
+                    <div class="border border-slate-200 rounded-lg overflow-hidden text-xs flex flex-col h-[350px]">
+                        <!-- 대화방 헤더 -->
+                        <div class="bg-sky-400 text-white p-3 font-bold flex justify-between items-center">
+                            <span>👥 국어 수행평가 2모둠 (공적)</span>
+                            <span class="text-lg">☰</span>
+                        </div>
+                        <!-- 대화 목록 스크롤 -->
+                        <div class="flex-grow p-3 bg-sky-100 space-y-3 overflow-y-auto">
+                            <!-- 상대방 메시지 -->
+                            <div class="flex items-start space-x-2">
+                                <div class="w-7 h-7 rounded-full bg-slate-300 flex items-center justify-center font-bold text-xs">수</div>
+                                <div>
+                                    <p class="text-[10px] text-slate-500 mb-0.5">수아</p>
+                                    <div class="bg-white p-2 rounded-r-lg rounded-bl-lg max-w-[180px] shadow-sm">
+                                        얘들아, 우리 내일까지 국어 3단원 피피티 완성하기로 한 거 잊지 않았지?
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 나의 메시지 -->
+                            <div class="flex items-start space-x-2 justify-end">
+                                <div class="text-right">
+                                    <p class="text-[10px] text-slate-500 mb-0.5">나(정민)</p>
+                                    <div class="bg-yellow-100 p-2 rounded-l-lg rounded-br-lg max-w-[180px] text-left shadow-sm inline-block">
+                                        응! 나는 상호 작용적 매체 예시 캡처 완료했어. 이따 단체 피드에 정리본 올려둘게.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 시스템 알림 -->
+                            <div class="text-center">
+                                <span class="bg-slate-900/10 text-slate-600 px-3 py-1 rounded-full text-[9px] inline-block">수아님이 파일(매체비교_정리.pdf)을 업로드했습니다.</span>
+                            </div>
+                        </div>
+                        <!-- 대화 입력창 -->
+                        <div class="border-t border-slate-200 bg-white p-2 flex items-center space-x-2">
+                            <input type="text" placeholder="메시지를 입력해 주세요." class="flex-grow p-1 text-xs border border-slate-200 rounded focus:outline-none" disabled>
+                            <button class="bg-yellow-400 text-slate-800 px-2.5 py-1 rounded font-bold" disabled>전송</button>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        // --- 3. 어휘 학습 플래시카드 데이터 세트 (어휘 학습 카드.pdf 기반) ---
+        const VOCAB_DATA = [
+            {
+                word: "매체",
+                definition: "어떤 작용을 한쪽에서 다른 쪽으로 전달하는 물체. 또는 그런 수단.",
+                bookEx: "자신의 소통 방식의 적절성을 검토하며 올바른 매체 소통 능력을 길러 보세요.",
+                myEx: "대중 매체를 통해 요즘 유행하는 노래를 알게 되었다."
+            },
+            {
+                word: "목적",
+                definition: "실현하려고 하는 일이나 방향.",
+                bookEx: "매체의 특성에 따라 사용 목적이나 소통 방식이 달라질 수도 있어.",
+                myEx: "독서의 목적에 따라 책의 종류와 독서 방법이 달라진다."
+            },
+            {
+                word: "특성",
+                definition: "일정한 사물에만 있는 특수한 성질.",
+                bookEx: "일상에서 활용하는 매체들은 각각 어떠한 특성이 있는지 알아볼까?",
+                myEx: "사람들마다 가지고 있는 특성이 다 다르다."
+            },
+            {
+                word: "양상",
+                definition: "사물이나 현상의 모양이나 상태.",
+                bookEx: "소통 맥락과 수용자 참여 양상을 고려하여 상호 작용적 매체를 분석할 수 있다.",
+                myEx: "계절에 따라 변하는 산의 양상이 참 아름답다."
+            },
+            {
+                word: "맥락",
+                definition: "사물 따위가 서로 이어져 있는 관계나 연관성.",
+                bookEx: "의사소통이 이루어지는 공간의 소통 맥락(공적/사적)을 빠르게 파악해야 해.",
+                myEx: "글의 앞뒤 맥락을 자세히 읽으면 모르는 단어도 추측할 수 있다."
+            },
+            {
+                word: "소통",
+                definition: "막히지 아니하고 잘 통함. 뜻이 서로 통하여 오해가 없음.",
+                bookEx: "상호 작용적 매체를 활용하여 친구들과 원활하게 소통할 수 있어.",
+                myEx: "진정한 의사소통은 서로의 의견을 경청하는 것에서 시작된다."
+            }
+        ];
+
+        let currentVocabIndex = 0;
+        let isCardFlipped = false;
+        let activeVocabs = [...VOCAB_DATA]; // 셔플용
+
+        // --- 4. 단원 평가 문제 은행 (15문항: OX 5문제 + 소단원 평가 10문제) ---
+        const QUIZ_QUESTIONS = [
+            // [1~5번: 쪽지 시험 기반 OX 및 단축형]
+            {
+                type: "OX 퀴즈",
+                question: "상호 작용적 매체를 활용하여 소통할 때 상황 맥락은 고려할 필요가 없다.",
+                options: ["O", "X"],
+                correct: 1, // "X"
+                explanation: "상호 작용적 매체를 활용하여 소통할 때에도 공적인 자리인지 사적인 자리인지, 상대방이 누구인지 등 <strong>의사소통의 구체적 상황 맥락을 철저히 고려</strong>해야 원활한 소통이 가능합니다."
+            },
+            {
+                type: "OX 퀴즈",
+                question: "상호 작용적 매체는 종류에 따라 사용 목적이나 소통 방식이 하나로 고정되어 엄격하게 정해져 있다.",
+                options: ["O", "X"],
+                correct: 1, // "X"
+                explanation: "매체에 따라 주된 특징이나 흐름에 차이가 있을 수는 있지만, 사용 목적이나 대화 방식이 언제나 <strong>오직 한 가지로 고정되어 있지는 않습니다</strong>. 소통 집단간의 합의와 맥락에 따라 변형될 수 있습니다."
+            },
+            {
+                type: "OX 퀴즈",
+                question: "정보의 수용과 생산이 일방향으로 이루어지는 매체를 상호 작용적 매체라고 한다.",
+                options: ["O", "X"],
+                correct: 1, // "X"
+                explanation: "상호 작용적 매체는 정보의 생산자와 수용자 간의 정보 교류가 한 방향으로만 갇히지 않고 <strong>쌍방향(상호 작용)</strong>으로 자유롭고 신속히 교환되는 매체입니다."
+            },
+            {
+                type: "OX 퀴즈",
+                question: "상호 작용적 매체를 활용하면 다른 사람과 시간과 장소의 제약 없이 대화를 나눌 수 있다.",
+                options: ["O", "X"],
+                correct: 0, // "O"
+                explanation: "상호 작용적 매체는 네트워크 연결망을 통해 시공간의 물리적 한계를 완전하게 허물고 <strong>초시공간적 자유도</strong>를 부여하는 뚜렷한 특징을 가집니다."
+            },
+            {
+                type: "빈칸 완성형",
+                question: "다음 빈칸에 알맞은 요소를 고르시오: '참여자들은 의사소통 (  ㉮  )에 적합한 매체를 선택하여 알맞게 사용해야 한다.'",
+                options: ["목적", "속도", "비용", "디자인"],
+                correct: 0, // "목적"
+                explanation: "의사소통을 어떤 <strong>목적</strong>(실행하려는 의도나 목적)으로 하느냐에 따라서 대화방 개설, SNS 활용, 공식 누리집 이용 등을 다르게 정해야 합니다."
+            },
+            // [6~15번: 소단원 평가 2회 기반 보강 10문제]
+            {
+                type: "객관식 5지선다",
+                question: "누리집(Homepage)과 온라인 대화방(Chatroom) 등 상호 작용적 매체들의 공통적인 특성으로 가장 알맞은 것은?",
+                options: [
+                    "게시 글의 인용과 외부 링크 공유 기능이 완전히 차단된다.",
+                    "정보의 생산자와 수용자가 명확하게 분리되어 상호 간섭이 어렵다.",
+                    "주로 불특정 다수만을 일방적으로 교육하기 위해 개설된다.",
+                    "누구나 생각이나 의견, 관점 등을 쉽고 자유롭게 생산하고 나눌 수 있다.",
+                    "공적인 가치 중심의 공무 업무 공유에만 초점을 맞춘 소통이 일어난다."
+                ],
+                correct: 3, // 4번
+                explanation: "상호 작용적 매체들은 정보의 <strong>수용과 생산이 쌍방향으로 모두 열려 있어</strong>, 이용자들이 생각과 지식을 매우 수월하게 제작하고 교류할 수 있다는 절대적 연관 강점이 있습니다."
+            },
+            {
+                type: "객관식 5지선다",
+                question: "온라인 대화방 등에서 그림말(이모티콘)을 올바르게 사용할 때의 기대 효과로 가장 거리가 먼 것은?",
+                options: [
+                    "대화하는 사람 간의 심리적 거리감을 좁히고 친밀감을 높여준다.",
+                    "글자(문자)보다 복잡하고 정밀한 수치적 데이터를 한결 명확히 정리해준다.",
+                    "자신의 주관적 감정이나 느낌을 텍스트 대신 빠르고 귀엽게 연출한다.",
+                    "대면 소통이 아니더라도 말하는 사람의 현재 기분 상태를 유추할 수 있다.",
+                    "전체 메시지에서 전하고자 하는 중심 문장에 입체적 강조를 가미한다."
+                ],
+                correct: 1, // 2번
+                explanation: "그림말은 정서적 교감, 간략한 의사 표명, 강조 등의 반언어적/비언어적 역할을 훌륭히 수행하나, <strong>정밀하고 세부적인 수치 데이터 정보까지 완전하고 완벽하게 번역해주지는 못합니다</strong>."
+            },
+            {
+                type: "객관식 5지선다",
+                question: "주로 단체의 업무나 홍보를 다양하게 게시하며, 공적인 맥락에서 정보를 공유하는 데 초점을 맞춘 대표적 매체는?",
+                options: [
+                    "누리집 (Homepage)",
+                    "개인 사회 관계망 서비스 (SNS)",
+                    "비공개 개인 1대1 대화방",
+                    "친목 동아리 단체 카톡방",
+                    "메모장 모바일 애플리케이션"
+                ],
+                correct: 0, // 1번
+                explanation: "기관이나 행정 조직의 업무를 보고하고 공적인 안내를 올리는 웹 페이지는 <strong>누리집 (Homepage)</strong>이 가장 최적화된 도구입니다."
+            },
+            {
+                type: "객관식 5지선다",
+                question: "소통 공간의 '공적 맥락'과 '사적 맥락'에 대한 이해로 가장 적절하지 않은 것은?",
+                options: [
+                    "학급 전체 건의 게시판에 글을 쓸 때는 격식과 정중함을 갖추어야 한다.",
+                    "친구들과 대화하는 개인 SNS 계정에는 비교적 친밀하고 편안한 표현을 쓸 수 있다.",
+                    "사적인 온라인 대화방이라도 상대를 공격하는 비속어를 무분별하게 사용하는 것은 옳지 않다.",
+                    "공무 업무용 수행평가 단체방에서는 공적인 맥락이 강하므로 개인적 수다를 피해야 한다.",
+                    "누리집 건의 게시판은 비공개 일기장과 유사하므로 거친 감정적 투정을 그대로 올려도 무방하다."
+                ],
+                correct: 4, // 5번
+                explanation: "누리집 건의 게시판이나 공공 게시판은 공공의 성격을 띠는 <strong>공적 맥락</strong>의 공간입니다. 격식과 예의를 지켜 정중하게 건의를 작성해야 합니다."
+            },
+            {
+                type: "객관식 5지선다",
+                question: "누리집과 비교할 때, 사회 관계망 서비스(SNS)가 갖는 상대적이고 고유한 특징으로 알맞은 것은?",
+                options: [
+                    "공공 기관의 대외 공무 처리를 목적으로만 엄격하게 한정 가동된다.",
+                    "이용자들 간에 유기적 네트워크 관계망을 구축하여 자유롭게 일상이나 의견을 전파한다.",
+                    "댓글을 달거나 답글을 공유하는 것과 같은 쌍방향 활동이 전혀 이루어지지 않는다.",
+                    "정보의 공급 책임자와 독자 간의 신분적 장벽이 훨씬 더 영구적으로 강화된다.",
+                    "언제나 폐쇄적인 1대1 실시간 문자 입력방식 외의 미디어 업로드는 불가능하다."
+                ],
+                correct: 1, // 2번
+                explanation: "SNS는 개인의 소소한 가치, 기호, 일상을 전 세계 관계망에 <strong>확산과 네트워크 형성</strong> 형태로 수월하게 연결해주도록 설계되어 있습니다."
+            },
+            {
+                type: "객관식 5지선다",
+                question: "온라인 단체 대화방(공적 과제방 등)에서 지켜야 할 바른 태도로 옳지 않은 것은?",
+                options: [
+                    "모두가 보아야 하는 공적 방에는 무의미하고 지나친 사적 농담을 반복하지 않는다.",
+                    "늦은 밤이나 휴식 중인 시간대에는 시급하지 않은 메시지 전송을 자제한다.",
+                    "얼굴이 보이지 않는 공간이므로 친구들에게는 거친 반말이나 고운 말을 쓰지 않아도 된다.",
+                    "대화방에 전송하기 전에 전송 대상 파일이 맞는지 다시 확인하고 보낸다.",
+                    "상대의 발언에 즉흥적으로 비난 댓글을 올리기보다는 이성적이고 배려 넘치는 어조를 유지한다."
+                ],
+                correct: 2, // 3번
+                explanation: "비대면 소통일수록 텍스트 너머에 있는 사람의 인격을 존중하고, 오해가 생기지 않도록 고운 말과 배려 섞인 조심스러운 어투를 준수해야 합니다."
+            },
+            {
+                type: "객관식 5지선다",
+                question: "상호 작용적 매체의 큰 이점 중 하나인 '생산자와 수용자 경계 소멸'의 올바른 해석은?",
+                options: [
+                    "이전 독자들이 단순히 읽는 단계를 넘어 댓글, 스크랩, 2차 배포를 통해 즉석에서 생산자로 바뀐다.",
+                    "모든 책과 정보지가 온라인상에서 영구적으로 폐지되어 사라짐을 의미한다.",
+                    "기존 전문 작가들이 더 이상 창작을 하지 못하도록 시스템에서 막는 조치이다.",
+                    "전송을 위해 주민등록등본 등의 공적 문서 승인을 모든 단계에 의무 도입한 것이다.",
+                    "수용자는 영원히 콘텐츠를 직접 건드릴 수 없도록 보호벽이 쳐지는 과정을 뜻한다."
+                ],
+                correct: 0, // 1번
+                explanation: "상호 작용적 매체에서는 클릭 한 번으로 소비자가 <strong>소셜 미디어 창작자로 손쉽게 포지션을 전환</strong>할 수 있습니다."
+            },
+            {
+                type: "객관식 5지선다",
+                question: "시간과 장소의 제약을 극복하는 매체의 우수한 특성을 가장 정석적으로 증명한 사례는?",
+                options: [
+                    "인근 우체통에 편지를 넣어 일주일 후에 답장을 받아보았다.",
+                    "교실 화이트보드에 분필로 학급 전체 모임 소식을 큼직하게 써두었다.",
+                    "외국에 거주하는 친지와 모바일 메신저로 시차에 상관없이 실시간으로 전화를 나누었다.",
+                    "공공 도서관의 백과사전 문서를 프린트하여 보존해두었다.",
+                    "라디오 정규 방송 시간을 메모지에 지참하고 다니다 정시에 수신기를 켰다."
+                ],
+                correct: 2, // 3번
+                explanation: "인터넷과 인공위성을 통하는 쌍방향 전파망 덕택에 <strong>해외의 멀리 떨어진 공간과 실시간 통화</strong>가 완벽하게 가능한 사례가 시공간의 한계 극복을 명징하게 보여줍니다."
+            },
+            {
+                type: "객관식 5지선다",
+                question: "주인공 정민이가 잃어버린 해피를 구출할 때, '온라인 대화방'을 1차적으로 사용한 직접적인 목적은 무엇일까요?",
+                options: [
+                    "공공 보호 센터에 실종 일지를 작성해 엄격하고 차가운 행정 서류 처리를 하기 위해서",
+                    "친한 친구들에게 신속하고 생생하게 실시간 실종 장소와 현재 상황을 알려 전파를 유도하기 위해서",
+                    "개인 프로필 배경 음악을 해피를 그리는 슬픈 음악으로 새롭게 장식하기 위해서",
+                    "가로등 보수 공사가 불량인 골목의 구청 민원과장 이메일을 추적해 화내기 위해서",
+                    "불특정 다수의 세계 시민들과 일반적인 반려동물 교육 정보 공유 세미나를 열기 위해서"
+                ],
+                correct: 1, // 2번
+                explanation: "정민이는 당장 현장 근처에 있는 친구들의 인력과 실시간 협조가 필요했으므로 <strong>동시다발적인 실시간 연락에 특화된 온라인 대화방</strong>에 즉각 소식을 보냈습니다."
+            },
+            {
+                type: "객관식 5지선다",
+                question: "상호 작용적 매체를 활용하여 올바른 소통을 가꾸고자 할 때 항상 신중히 검토해야 하는 3요소는?",
+                options: [
+                    "의사소통 목적, 수용자(대화 상대), 공적/사적 상황 맥락",
+                    "인터넷 전송 요금제, 배터리 잔량, 모바일 단말기 제조사",
+                    "이모티콘 사용 횟수, 글꼴의 크기, 프로필 사진 개수",
+                    "대화방 참여자의 가계 자산, 검색 로봇 유무, 화면 밝기",
+                    "선호하는 음악 장르, 하루 문자 발송 제한량, 계정 비밀번호 자릿수"
+                ],
+                correct: 0, // 1번
+                explanation: "교과서에서 반복해서 다루는 건강한 소통 전제 조건은 소통하는 <strong>목적</strong>, 소통을 수신하는 <strong>수용자</strong>, 그리고 대화방이 어떤 성격인지에 대한 <strong>상황 맥락</strong>입니다."
+            }
+        ];
+
+        let currentQuizIndex = 0;
+        let selectedOptionIndex = null;
+        let userAnswers = []; // 유저가 고른 오답/정답 추적 및 결과창 분석용
+
+        // --- 5. 어휘 학습 플래시카드 실행 엔진 ---
+        function updateVocabCardUI() {
+            const currentVocab = activeVocabs[currentVocabIndex];
+            
+            // 카드 뒤집혀 있다면 초기화 (앞면부터 보이도록)
+            const innerCard = document.getElementById('vocab-card-inner');
+            innerCard.classList.remove('rotate-y-180');
+            isCardFlipped = false;
+
+            // 앞면 내용 갱신
+            document.getElementById('card-front-id').innerText = `${String(currentVocabIndex + 1).padStart(2, '0')} / ${String(activeVocabs.length).padStart(2, '0')}`;
+            document.getElementById('vocab-word').innerText = currentVocab.word;
+
+            // 뒷면 내용 갱신
+            document.getElementById('vocab-back-word').innerText = `${currentVocab.word}`;
+            document.getElementById('vocab-definition').innerHTML = currentVocab.definition;
+            document.getElementById('vocab-ex-book').innerText = currentVocab.bookEx;
+            document.getElementById('vocab-ex-my').innerText = currentVocab.myEx;
+
+            // 진행 텍스트 변경
+            document.getElementById('card-progress').innerText = `${currentVocabIndex + 1} / ${activeVocabs.length} 단어`;
+        }
+
+        function flipVocabCard() {
+            const innerCard = document.getElementById('vocab-card-inner');
+            if (isCardFlipped) {
+                innerCard.classList.remove('rotate-y-180');
+                isCardFlipped = false;
+            } else {
+                innerCard.classList.add('rotate-y-180');
+                isCardFlipped = true;
+            }
+        }
+
+        function nextVocabCard() {
+            currentVocabIndex = (currentVocabIndex + 1) % activeVocabs.length;
+            updateVocabCardUI();
+        }
+
+        function prevVocabCard() {
+            currentVocabIndex = (currentVocabIndex - 1 + activeVocabs.length) % activeVocabs.length;
+            updateVocabCardUI();
+        }
+
+        function shuffleVocabCards() {
+            // 피셔-예이츠 셔플 알고리즘으로 무작위 배정
+            for (let i = activeVocabs.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [activeVocabs[i], activeVocabs[j]] = [activeVocabs[j], activeVocabs[i]];
+            }
+            currentVocabIndex = 0;
+            updateVocabCardUI();
+            showAlertModal("셔플 완료", "단어 카드들이 무작위 순서로 섞였습니다. 다시 집중하여 점검해 보세요!", true);
+        }
+
+        // --- 6. 단원 평가 퀴즈 엔진 실행 및 성적표 분석 로직 ---
+        function renderQuizQuestion() {
+            const quiz = QUIZ_QUESTIONS[currentQuizIndex];
+            
+            // 헤더 정보
+            document.getElementById('quiz-progress').innerText = `${currentQuizIndex + 1} / ${QUIZ_QUESTIONS.length}`;
+            document.getElementById('quiz-type').innerText = quiz.type;
+            document.getElementById('quiz-question').innerHTML = quiz.question;
+
+            // 피드백 패널 숨기기
+            const feedback = document.getElementById('quiz-feedback');
+            feedback.classList.add('hidden');
+
+            // 옵션 영역 렌더링
+            const optionsContainer = document.getElementById('quiz-options');
+            optionsContainer.innerHTML = '';
+            selectedOptionIndex = null;
+
+            quiz.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.onclick = () => selectQuizOption(idx);
+                btn.id = `opt-${idx}`;
+                
+                // 깔끔한 옵션 선택 단추 디자인
+                btn.className = "w-full text-left p-4 rounded-xl border border-slate-200 hover:border-indigo-500 hover:bg-slate-50 font-medium text-sm transition-all flex items-center justify-between group";
+                btn.innerHTML = `
+                    <span class="text-slate-800 group-hover:text-indigo-900 leading-relaxed">${opt}</span>
+                    <span class="w-5 h-5 rounded-full border border-slate-300 group-hover:border-indigo-500 flex-shrink-0 flex items-center justify-center text-xs text-transparent ml-2">✓</span>
+                `;
+                optionsContainer.appendChild(btn);
+            });
+
+            // 다음 문제 버튼 상태 조정 (마지막 문제면 결과 제출로 변환)
+            const nextBtn = document.getElementById('btn-next');
+            if (currentQuizIndex === QUIZ_QUESTIONS.length - 1) {
+                nextBtn.innerHTML = `
+                    <span>평가 종료 및 성적 산출</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                `;
+            } else {
+                nextBtn.innerHTML = `
+                    <span>다음 문제</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                `;
+            }
+        }
+
+        function selectQuizOption(index) {
+            const quiz = QUIZ_QUESTIONS[currentQuizIndex];
+            selectedOptionIndex = index;
+
+            // 모든 옵션 버튼 스타일을 기본 상태로 복원
+            quiz.options.forEach((opt, idx) => {
+                const btn = document.getElementById(`opt-${idx}`);
+                btn.className = "w-full text-left p-4 rounded-xl border border-slate-200 hover:border-indigo-500 hover:bg-slate-50 font-medium text-sm transition-all flex items-center justify-between group";
+                btn.querySelector('span:last-child').className = "w-5 h-5 rounded-full border border-slate-300 group-hover:border-indigo-500 flex items-center justify-center text-xs text-transparent ml-2";
+            });
+
+            // 선택한 단추 활성화 강조
+            const activeBtn = document.getElementById(`opt-${index}`);
+            activeBtn.className = "w-full text-left p-4 rounded-xl border-2 border-indigo-600 bg-indigo-50/50 font-bold text-sm transition-all flex items-center justify-between text-indigo-900";
+            activeBtn.querySelector('span:last-child').className = "w-5 h-5 rounded-full bg-indigo-600 border border-indigo-600 flex items-center justify-center text-xs text-white ml-2";
+
+            // 정답 확인 피드백 즉시 게시
+            const feedback = document.getElementById('quiz-feedback');
+            feedback.classList.remove('hidden');
+
+            if (index === quiz.correct) {
+                feedback.className = "rounded-xl p-4 mb-4 flex items-start space-x-3 bg-emerald-50 border border-emerald-100 text-emerald-950 text-xs sm:text-sm";
+                feedback.innerHTML = `
+                    <div class="bg-emerald-500 text-white rounded-full p-1.5 flex-shrink-0">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <div>
+                        <p class="font-bold text-emerald-800 text-sm">정답입니다! 🎉</p>
+                        <p class="mt-1 leading-relaxed">${quiz.explanation}</p>
+                    </div>
+                `;
+            } else {
+                feedback.className = "rounded-xl p-4 mb-4 flex items-start space-x-3 bg-rose-50 border border-rose-100 text-rose-950 text-xs sm:text-sm";
+                feedback.innerHTML = `
+                    <div class="bg-rose-500 text-white rounded-full p-1.5 flex-shrink-0">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </div>
+                    <div>
+                        <p class="font-bold text-rose-800 text-sm">오답입니다. 다시 한번 읽어보세요! 🔍</p>
+                        <p class="mt-1 leading-relaxed">${quiz.explanation}</p>
+                    </div>
+                `;
+            }
+        }
+
+        function nextQuizQuestion() {
+            if (selectedOptionIndex === null) {
+                showAlertModal("답변 미선택", "정답을 선택해야 다음 평가 문제로 이동할 수 있습니다.", false);
+                return;
+            }
+
+            // 사용자가 입력한 기록 임시 저장
+            userAnswers[currentQuizIndex] = {
+                userSelect: selectedOptionIndex,
+                isCorrect: selectedOptionIndex === QUIZ_QUESTIONS[currentQuizIndex].correct
+            };
+
+            if (currentQuizIndex < QUIZ_QUESTIONS.length - 1) {
+                currentQuizIndex++;
+                renderQuizQuestion();
+            } else {
+                // 전 문항을 완수했을 때 성적 산출 및 최종 성적표 화면 표시
+                displayFinalQuizReport();
+            }
+        }
+
+        function displayFinalQuizReport() {
+            // 성적 계산
+            const totalScore = userAnswers.filter(ans => ans && ans.isCorrect).length;
+            
+            // 문제 출제 영역 숨기고 결과 영역 노출
+            document.getElementById('quiz-card-container').classList.add('hidden');
+            const resultContainer = document.getElementById('quiz-result-container');
+            resultContainer.classList.remove('hidden');
+
+            document.getElementById('result-score').innerText = totalScore;
+
+            // 성적에 따른 격려 멘트 매칭
+            let remark = "멋집니다! 매체의 올바른 특성을 아주 훌륭히 이수하셨어요.";
+            if (totalScore === 15) {
+                remark = "대단합니다! 15문제 만점입니다. 상호 작용적 매체 마스터로 선언합니다! 🏆";
+            } else if (totalScore >= 10) {
+                remark = "훌륭한 이해도입니다! 약간 헷갈렸던 문제들의 해설을 아래 오답 노트에서 꼼꼼히 점검해 보세요. 👍";
+            } else {
+                remark = "괜찮습니다! 매체의 정의와 특징을 다시 읽어본 뒤 한 번 더 완벽히 정복해 보세요. 📖";
+            }
+            document.getElementById('result-feedback-message').innerText = remark;
+
+            // 오답 분석 및 해설 리스트 삽입
+            const reviewList = document.getElementById('quiz-review-list');
+            reviewList.innerHTML = '';
+
+            QUIZ_QUESTIONS.forEach((quiz, idx) => {
+                const userRecord = userAnswers[idx] || { userSelect: -1, isCorrect: false };
+                const itemDiv = document.createElement('div');
+                
+                const cardBorderClass = userRecord.isCorrect ? 'border-emerald-200 bg-emerald-50/20' : 'border-rose-200 bg-rose-50/20';
+                const statusBadge = userRecord.isCorrect 
+                    ? '<span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">정답</span>' 
+                    : '<span class="bg-rose-100 text-rose-800 text-[10px] font-bold px-2 py-0.5 rounded">오답</span>';
+
+                itemDiv.className = `p-4 rounded-xl border ${cardBorderClass} text-xs space-y-2`;
+                itemDiv.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-slate-500">Q${idx + 1}. [${quiz.type}]</span>
+                        ${statusBadge}
+                    </div>
+                    <p class="font-bold text-slate-900 leading-relaxed text-[13px]">${quiz.question}</p>
+                    <div class="space-y-1 text-slate-600 bg-white p-2.5 rounded-lg border border-slate-100 text-[11px]">
+                        <p>👉 나의 답변: <span class="font-semibold text-slate-800">${quiz.options[userRecord.userSelect] || '선택하지 않음'}</span></p>
+                        <p>🎯 실제 정답: <span class="font-semibold text-indigo-600">${quiz.options[quiz.correct]}</span></p>
+                        <div class="mt-2 text-slate-500 border-t border-slate-100 pt-2 leading-relaxed">
+                            <strong>해설:</strong> ${quiz.explanation}
+                        </div>
+                    </div>
+                `;
+                reviewList.appendChild(itemDiv);
+            });
+
+            showAlertModal("평가 종료", `총 15문제 중 ${totalScore}문제를 맞췄습니다! 성적표를 확인해 보세요.`, true);
+        }
+
+        function resetQuiz() {
+            currentQuizIndex = 0;
+            selectedOptionIndex = null;
+            userAnswers = [];
+            
+            // UI 복원
+            document.getElementById('quiz-card-container').classList.remove('hidden');
+            document.getElementById('quiz-result-container').classList.add('hidden');
+            
+            renderQuizQuestion();
+        }
+
+        // --- 7. 카드 클릭 상세 팝업 모달 제어 ---
+        function openCardModal(cardId) {
+            const data = CARD_DATA[cardId];
+            if (!data) return;
+
+            document.getElementById('modal-category').innerText = data.category;
+            document.getElementById('modal-category').className = `text-xs px-2.5 py-1 rounded-md font-semibold ${data.tagColor}`;
+            
+            let bodyHtml = `
+                <h4 class="text-xl font-bold text-slate-900 leading-tight mb-2">${data.title}</h4>
+                <div class="mt-4">${data.content}</div>
+            `;
+            document.getElementById('modal-body').innerHTML = bodyHtml;
+            document.getElementById('modal-card-id').innerText = data.cardId;
+
+            const modal = document.getElementById('card-modal');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.querySelector('div').classList.remove('scale-95');
+                modal.querySelector('div').classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeCardModal() {
+            const modal = document.getElementById('card-modal');
+            modal.classList.add('opacity-0');
+            modal.querySelector('div').classList.remove('scale-100');
+            modal.querySelector('div').classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // 알림 전용 커스텀 모달 열기 (알림창 alert 우회용)
+        function showAlertModal(title, message, isSuccess = true) {
+            document.getElementById('alert-title').innerText = title;
+            document.getElementById('alert-message').innerText = message;
+            
+            const iconContainer = document.getElementById('alert-icon-container');
+            if (isSuccess) {
+                iconContainer.className = "mx-auto w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4";
+                iconContainer.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>`;
+            } else {
+                iconContainer.className = "mx-auto w-12 h-12 rounded-full bg-rose-50 text-rose-600 flex items-center justify-center mb-4";
+                iconContainer.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>`;
+            }
+            
+            document.getElementById('alert-modal').classList.remove('hidden');
+        }
+
+        function closeAlertModal() {
+            document.getElementById('alert-modal').classList.add('hidden');
+        }
+
+        // --- 8. 미디어 비교 탭 선택 로직 ---
+        function switchTab(tabId) {
+            const data = MEDIA_TABS[tabId];
+            if (!data) return;
+
+            const tabs = ['homepage', 'sns', 'chatroom'];
+            tabs.forEach(t => {
+                const btn = document.getElementById(`btn-${t}`);
+                if (btn) {
+                    btn.className = "py-3 px-5 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300 transition-all whitespace-nowrap focus:outline-none flex items-center space-x-2";
+                }
+            });
+
+            const activeBtn = document.getElementById(`btn-${tabId}`);
+            if (activeBtn) {
+                activeBtn.className = "py-3 px-5 text-sm font-semibold border-b-2 border-indigo-600 text-indigo-600 transition-all whitespace-nowrap focus:outline-none flex items-center space-x-2";
+            }
+
+            document.getElementById('media-desc').innerHTML = data.desc;
+            document.getElementById('preview-title').innerText = data.previewTitle;
+            document.getElementById('media-preview-content').innerHTML = data.preview;
+        }
+
+        // --- 9. 초기 로드 시 시동 장치 ---
+        window.onload = function() {
+            // 기본 미디어 탭 활성화 로드
+            switchTab('homepage');
+            
+            // 어휘 플래시카드 상태 로딩
+            updateVocabCardUI();
+
+            // 단원 평가 1번 문항 로딩
+            renderQuizQuestion();
+        }
+    </script>
+</body>
+</html>
